@@ -1,7 +1,5 @@
 package com.example.mqttdemo;
 
-import com.example.mylibrary.MyMqttService;
-
 public class DataSetObserver implements ObservableChangeListener{
 
     private String clientId = "HJ'AndroidClient";
@@ -64,6 +62,6 @@ public class DataSetObserver implements ObservableChangeListener{
 
     @Override
     public void notifyChange(DataSetObserver observer) {
-        DataSetObservable.getInstance(MyApplication.getContext()).publishMessage(observer);
+        DataSetObservable.getInstance().publishMessage(observer);
     }
 }
